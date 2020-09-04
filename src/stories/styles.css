@@ -1,0 +1,81 @@
+.container__stories {
+    max-height: 80px;
+    margin-top: 20px;
+    padding: 10px 0;
+
+    max-width: 500px;
+
+    display: flex;
+
+    border: 1px solid lightgray;
+    background-color: #fff;
+
+    overflow-x: hidden;
+}
+
+.container__stories .myStories--list ul {
+    display: flex;
+    align-items: center;
+
+    transition: all 0.02s;
+}
+
+.container__stories ul li {
+    list-style: none;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container__stories .myStories--list ul li img {
+    width: 65px;
+    border-radius: 50%;
+
+    margin-bottom: 5px;
+}
+
+.container__stories .myStories--list ul li p {
+    font-size: 12px;
+}
+
+.myStories--list {
+    display: flex;
+
+    align-items: center;
+}
+
+.originals--left,
+.originals--right {
+    position: absolute;
+    width: 40px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease 0.2s;
+}
+
+.no-arrow-left {
+   display: none;
+}
+
+.no-arrow-right {
+    display: none;
+ }
+
+.originals--left {
+    left: 520px;
+}
+
+.originals--right {
+    right: 570px;
+}
+
+.container__stories:hover .originals--right,
+.container__stories:hover .originals--left {
+    opacity: 1;
+}
